@@ -1,0 +1,31 @@
+# Conda-Forge
+matplotlib
+matplotlib-inline
+numpy
+pandas
+plotly
+tqdm
+
+# Pip
+plotly_calplot
+stravalib
+
+# Pandas dependency
+openpyxl
+python-calamine
+seaborn
+xlsxwriter
+
+# Pandas Performance
+bottleneck
+numba
+numexpr
+pyarrow
+
+# Other
+ipython
+ipywidgets
+
+# Documentation
+nbsphinx
+nbsphinx-link

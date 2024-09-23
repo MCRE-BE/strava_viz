@@ -1,0 +1,50 @@
+name: Strava
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # For code formatting purpuses
+  - ruff
+
+  # Development
+  - conda
+  - mamba
+  - pip > 23.1
+  - python
+  - pre-commit
+  - setuptools
+
+  # to work in VSCode
+  - ipykernel
+  - ipython
+  - ipywidgets
+  - jupyter
+  - jupyterlab
+  - nbconvert
+
+  # Real package dependencies
+  - calmap
+  - environs
+  - matplotlib
+  - matplotlib-inline
+  - numpy
+  - pandas
+  - plotly
+  - tqdm
+
+  # Pandas dependency
+  - openpyxl
+  - python-calamine
+  - seaborn
+  - xlsxwriter
+
+  # Pandas Performance
+  - bottleneck
+  - numba
+  - numexpr
+  - pyarrow
+
+  - pip:
+      - -e . --config-settings="editable_mode=compat"
+      - stravalib
+      - plotly_calplot
