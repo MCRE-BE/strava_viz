@@ -1,0 +1,32 @@
+exclude: ^tests/resources/
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev:  v4.6.0
+    hooks:
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-merge-conflict
+      - id: no-commit-to-branch
+        name: Don't commit to master
+        args: ['--branch', 'master']
+      - id: check-yaml
+      - id: check-toml
+      - id: check-ast
+      - id: mixed-line-ending
+        files: \.(py|sh|rst|yml|yaml)$
+      - id: trailing-whitespace
+        files: \.(py|sh|rst|yml|yaml)$
+      - id: end-of-file-fixer
+        files: \.(py|sh|rst|yml|yaml)$
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.6.7
+    hooks:
+      # Run the linter.
+      - id: ruff
+        types_or: [ python, pyi, jupyter ]
+        args: [ --fix, --select, I]
+        # To enable sorting of imports https://github.com/astral-sh/ruff/issues/8926#issuecomment-1834048218
+        # Run the formatter.
+      - id: ruff-format
+        types_or: [ python, pyi, jupyter ]
